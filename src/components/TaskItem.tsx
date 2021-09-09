@@ -85,11 +85,11 @@ export function TaskItem({
           </TouchableOpacity>
         ) : (
           <>
-            {task.done === false ? (
+            {task.done ? null : (
               <TouchableOpacity onPress={handleStartEditing}>
                 <Image source={editIcon} />
               </TouchableOpacity>
-            ) : null}
+            )}
           </>
         )}
 
